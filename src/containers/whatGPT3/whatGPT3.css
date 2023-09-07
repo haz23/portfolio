@@ -1,0 +1,159 @@
+.gpt3__whatgpt3 {
+    display: flex;
+    flex-direction: column;
+
+    padding: 2rem;
+
+
+
+    /* global 92%+ browsers support */
+    background:#1DB954;
+
+}
+
+.gpt3__whatgpt3-feature {
+    display: flex;
+    font-size: 60px;
+    font-family: var(--font-family);
+    font-weight: 500;
+    color: #fff;
+}
+
+/* Customizing feature component as per needs */
+.gpt3__whatgpt3-feature .gpt3__features-container__feature {
+    margin: 0;
+}
+
+/* Customizing feature component as per needs */
+.gpt3__whatgpt3-feature .gpt3__features-container_feature-text {
+    max-width: 700px;
+}
+
+.gpt3__whatgpt3-heading {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    
+    margin: 2rem 0 2rem;
+}
+
+.gpt3__whatgpt3-heading h1 {
+    font-size: 20px;
+    line-height: 45px;
+    font-weight: 500;
+    font-family: var(--font-family);
+}
+
+.gpt3__whatgpt3-heading p {
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 30px;
+    color: var(--color-subtext);
+    cursor: pointer;
+}
+
+/* Set the initial size of the images and container styles */
+.gpt3__brand div {
+    flex: 1;
+    margin: 4rem; /* Adjust margin as needed for spacing */
+    text-align: center;
+    position: relative; /* Add positioning for stacking text */
+    overflow: hidden; /* Hide any overflow to ensure text is not visible */
+
+  }
+  
+  /* Set a maximum width for the images */
+  .gpt3__brand div img {
+    width: 100%; /* Make the image width 100% of its container */
+    height: auto; /* Maintain aspect ratio */
+    transition: transform 0.3s ease, filter 0.3s ease;; /* Add a smooth transition effect for scaling */
+  }
+
+  .gpt3__brand div:hover img {
+    filter: blur(5px); /* Apply a blur effect to the image */
+  }
+  
+  
+  /* Add text styles */
+  .gpt3__brand div::after {
+    content: attr(data-text); /* Display text from the data-text attribute */
+    font-family: var(--font-family);
+    font-size: 24px;
+    font-weight: 500;
+    color: #1DB954;
+    background-color: #000;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 0.5rem;
+    box-sizing: border-box;
+    transform: translateX(100%); /* Hide the text above the image by default */
+    transition: transform 0.3s ease; /* Add a transition for smooth appearance */
+  }
+  
+  /* Add hover effect for showing the text */
+  .gpt3__brand div:hover::after {
+    transform: translateX(0); /* Show the text when hovered */
+  }
+
+.gpt3__whatgpt3-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+
+    margin-top: 2rem;
+}
+
+/* Customizing feature component as per needs */
+.gpt3__whatgpt3-container .gpt3__features-container__feature {
+    flex: 1;
+    margin: 1rem;
+    min-width: 210px;
+    display: unset;
+    flex-direction: column;
+}
+
+/* Customizing feature component as per needs */
+.gpt3__whatgpt3-container .gpt3__features-container_feature-text {
+    margin-top: 0.5rem;
+}
+
+@media screen and (max-width: 850px) {
+    .gpt3__whatgpt3-heading {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-bottom: 0rem;
+    }
+
+    .gpt3__whatgpt3-heading p {
+        margin-top: 1rem;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    /* Customizing feature component as per needs */
+    .gpt3__whatgpt3-feature .gpt3__features-container__feature {
+        flex-direction: column;
+    }
+
+    /* Customizing feature component as per needs */
+    .gpt3__whatgpt3-feature .gpt3__features-container_feature-text {
+        margin-top: 0.5rem;
+    }
+
+    .gpt3__whatgpt3-heading h1 {
+        font-size: 28px;
+        line-height: 40px;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    /* Customizing feature component as per needs */
+    .gpt3__whatgpt3-container .gpt3__features-container__feature {
+        margin: 1rem 0;
+        min-width: 100%;
+    }
+}
