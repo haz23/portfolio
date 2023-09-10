@@ -1,0 +1,93 @@
+.edu-container {
+    width: 500px;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 50px;
+    background: #e2e4e3;
+    box-shadow:  25px -25px 50px #949a97,
+    -25px 25px 50px #ffffff;
+    transition: 400ms transform, 400ms box-shadow, 400ms background-color;
+    margin-bottom: 2rem;
+    padding: 1rem;
+}
+
+
+
+.edu-container:hover{
+    transform: scale(1.1);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+    background-color: #222725;
+    color: #1DC95B;
+}
+
+.edu-container-date {
+    flex: 1;
+    margin: 1rem; /* Top Right Bottom Left */
+
+}
+
+.edu-container-date h2 {
+    font-family: var(--font-family);
+    font-weight: 800;
+    font-size: 30px;
+    line-height: 10px;
+}
+
+.edu-container-title {
+    flex: 1;
+    margin: 1rem 1rem 1rem 1rem; /* Top Right Bottom Left */
+
+}
+
+.edu-container-title h1 {
+    font-family: var(--font-family);
+    font-weight: 550;
+    font-size: 35px;
+    line-height: 35px;
+    text-align: center;
+}
+
+
+.edu-container-text {
+    flex: 2;
+    display: flex;
+    margin: 1rem; /* Top Right Bottom Left */
+
+}
+
+.edu-container-logo {
+    display: flex;
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
+  }
+
+.edu-container-logo img{
+    width: 30%;
+}
+
+.edu-container-text p {
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 25px;
+    line-height: 5px;
+}
+
+
+
+@media screen and (max-width: 550px) {
+    .edu-container-title h1 {
+        font-size: 14px;
+        line-height: 22px;
+    }
+
+    .edu-container-text p {
+        font-size: 12px;
+        line-height: 20px;
+    }
+
+    .edu-container {
+        margin: 1rem 0;
+    }
+}

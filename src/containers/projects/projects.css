@@ -1,0 +1,38 @@
+.proj {
+    display: flex;
+    flex-direction: column;    
+    
+}
+
+.proj-heading {
+    width: 100%;
+    text-align: left;
+
+
+    margin-bottom: 5rem;
+}
+
+.proj-heading h1 {
+    font-size: 62px;
+    line-height: 75px;
+    font-family: var(--font-family);
+    font-weight: 800;
+    color: #1DB954;
+    text-align: center;
+}
+
+.proj-container {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    margin-bottom: 2rem;
+    
+}
+
+.proj-container_groupB {
+    flex: 1;
+    margin-bottom: 2rem;
+
+}
+
+

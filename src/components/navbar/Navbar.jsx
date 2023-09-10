@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { RiMenu3Line, RiCloseLine } from 'react-icons/ri';
-import logo from '../../logo.svg';
 import './navbar.css';
 
 const Navbar = () => {
@@ -19,9 +18,9 @@ const Navbar = () => {
   };
 
   return (
-    <div className="gpt3__navbar">
-      <div className="gpt3__navbar-links">
-        <div className="gpt3__navbar-links_container">
+    <div className="navbar">
+      <div className="navbar-links">
+        <div className="navbar-links_container">
           <p
             className={clickedLink === 'home' ? 'clicked' : ''}
             onClick={() => handleLinkClick('home')}
@@ -29,58 +28,70 @@ const Navbar = () => {
             <a href="#home">AH</a>
           </p>
           <p
-            className={clickedLink === 'wgpt3' ? 'clicked' : ''}
-            onClick={() => handleLinkClick('wgpt3')}
+            className={clickedLink === 'skills' ? 'clicked' : ''}
+            onClick={() => handleLinkClick('skills')}
           >
-            <a href="#wgpt3">About Me</a>
+            <a href="#skills">Skills</a>
           </p>
           <p
-            className={clickedLink === 'possibility' ? 'clicked' : ''}
-            onClick={() => handleLinkClick('possibility')}
+            className={clickedLink === 'educations' ? 'clicked' : ''}
+            onClick={() => handleLinkClick('educations')}
           >
-            <a href="#possibility">Projects</a>
+            <a href="#educations">Education</a>
           </p>
           <p
-            className={clickedLink === 'features' ? 'clicked' : ''}
-            onClick={() => handleLinkClick('features')}
+            className={clickedLink === 'projects' ? 'clicked' : ''}
+            onClick={() => handleLinkClick('projects')}
           >
-            <a href="#features">Contacts</a>
+            <a href="#projects">Projects</a>
+          </p>
+          <p
+            className={clickedLink === 'contacts' ? 'clicked' : ''}
+            onClick={() => handleLinkClick('contacts')}
+          >
+            <a href="#contacts">Contacts</a>
           </p>
         </div>
       </div>
-      <div className="gpt3__navbar-menu">
+      <div className="navbar-menu">
         {toggleMenu ? (
           <RiCloseLine color="#fff" size={27} onClick={() => setToggleMenu(false)} />
         ) : (
           <RiMenu3Line color="#fff" size={27} onClick={() => setToggleMenu(true)} />
         )}
         {toggleMenu && (
-          <div className="gpt3__navbar-menu_container scale-up-center">
-            <div className="gpt3__navbar-menu_container-links">
-              <p
-                className={clickedLink === 'home' ? 'clicked' : ''}
-                onClick={() => handleLinkClick('home')}
-              >
-                <a href="#home">AH</a>
-              </p>
-              <p
-                className={clickedLink === 'wgpt3' ? 'clicked' : ''}
-                onClick={() => handleLinkClick('wgpt3')}
-              >
-                <a href="#wgpt3">About Me</a>
-              </p>
-              <p
-                className={clickedLink === 'possibility' ? 'clicked' : ''}
-                onClick={() => handleLinkClick('possibility')}
-              >
-                <a href="#possibility">Projects</a>
-              </p>
-              <p
-                className={clickedLink === 'features' ? 'clicked' : ''}
-                onClick={() => handleLinkClick('features')}
-              >
-                <a href="#features">Contacts</a>
-              </p>
+          <div className="navbar-menu_container scale-up-center">
+            <div className="navbar-menu_container-links">
+            <p
+            className={clickedLink === 'home' ? 'clicked' : ''}
+            onClick={() => handleLinkClick('home')}
+          >
+            <a href="#home">AH</a>
+          </p>
+          <p
+            className={clickedLink === 'skills' ? 'clicked' : ''}
+            onClick={() => handleLinkClick('skills')}
+          >
+            <a href="#skills">Skills</a>
+          </p>
+          <p
+            className={clickedLink === 'educations' ? 'clicked' : ''}
+            onClick={() => handleLinkClick('educations')}
+          >
+            <a href="#educations">Education</a>
+          </p>
+          <p
+            className={clickedLink === 'projects' ? 'clicked' : ''}
+            onClick={() => handleLinkClick('projects')}
+          >
+            <a href="#projects">Projects</a>
+          </p>
+          <p
+            className={clickedLink === '' ? 'clicked' : ''}
+            onClick={() => handleLinkClick('')}
+          >
+            <a href="#contacts">Contacts</a>
+          </p>
             </div>
           </div>
         )}

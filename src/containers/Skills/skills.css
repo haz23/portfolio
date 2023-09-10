@@ -1,0 +1,141 @@
+.skills {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center vertically */
+    align-items: center; /* Center horizontally */
+
+    border-radius: 50px;
+    background: #e2e4e3;
+    box-shadow:  37px -37px 74px #c2c4c3,
+                 -37px 37px 74px #ffffff;
+    
+    
+
+    padding: 2rem;
+}
+
+.skills-heading {
+    font-size: 62px;
+    line-height: 45px;
+    font-weight: 800;
+    font-family: var(--font-family);
+    color: #222725;
+    margin-bottom: 2rem;
+}
+
+
+.skills-heading p {
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 30px;
+    color: var(--color-subtext);
+    cursor: pointer;
+}
+
+.logo {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo div {
+    flex: 1;
+    max-width: 150px;
+    min-width: 120px;
+    margin: 1rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    gap: 6rem 6rem; /* Adjust the gap between images as needed */
+    justify-content: center; /* Center align the images */
+  }
+
+/* Set the initial size of the images and container styles */
+.logo div {
+    flex: 1;
+    text-align: center;
+    position: relative; /* Add positioning for stacking text */
+    overflow: hidden; /* Hide any overflow to ensure text is not visible */
+  }
+  
+  /* Set a maximum width for the images */
+  .logo div img {
+    width: 60%; /* Make the image width 100% of its container */
+    height: auto; /* Maintain aspect ratio */
+    transition: transform 0.3s ease, filter 0.3s ease;; /* Add a smooth transition effect for scaling */
+  }
+
+  .logo div:hover img {
+    filter: blur(5px); /* Apply a blur effect to the image */
+  }
+  
+  
+  /* Add text styles */
+  .logo div::after {
+    content: attr(data-text); /* Display text from the data-text attribute */
+    font-family: var(--font-family);
+    font-size: 24px;
+    font-weight: 500;
+    color: #1DC95B;
+    background-color: #181818;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 0.5rem;
+    box-sizing: border-box;
+    transform: translateX(100%); /* Hide the text above the image by default */
+    transition: transform 0.3s ease; /* Add a transition for smooth appearance */
+  }
+  
+  /* Add hover effect for showing the text */
+  .logo div:hover::after {
+    transform: translateX(0); /* Show the text when hovered */
+  }
+
+
+
+
+@media screen and (max-width: 850px) {
+    .skills-heading {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-bottom: 0rem;
+    }
+
+    .skills-heading p {
+        margin-top: 1rem;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    /* Customizing feature component as per needs */
+    .skills-feature .features-container__feature {
+        flex-direction: column;
+    }
+
+    /* Customizing feature component as per needs */
+    .skills-feature .features-container_feature-text {
+        margin-top: 0.5rem;
+    }
+
+    .skills-heading h1 {
+        font-size: 28px;
+        line-height: 40px;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    /* Customizing feature component as per needs */
+    .skills-container .features-container__feature {
+        margin: 1rem 0;
+        min-width: 100%;
+    }
+}

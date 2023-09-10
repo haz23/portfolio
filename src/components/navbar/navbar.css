@@ -1,15 +1,20 @@
-.gpt3__navbar {
+.navbar {
     width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     position: fixed;
-    background-color: #000;
+    top: 0;
+    left: 0;
+    z-index: 1000; /* Adjust the z-index to be higher than the other content */
+    /* Add any other styles you need for your navbar */
+
+    background-color: #535353;
 
     padding: 2rem 4rem;
 }
 
-.gpt3__navbar-links {
+.navbar-links {
     flex: 1;
     display: flex;
     justify-content: flex-start;
@@ -17,30 +22,32 @@
 
 }
 
-.gpt3__navbar-links_logo {
+.navbar-links_logo {
     margin-right: 2rem;
 }
 
-.gpt3__navbar-links_logo img {
+.navbar-links_logo img {
     width: 62.56px;
     height: 16.02px;
 }
 
-.gpt3__navbar-links_container {
+.navbar-links_container {
     display: flex;
     flex-direction: row;
 }
 
-.gpt3__navbar-sign {
+
+
+.navbar-sign {
     display: flex;
     justify-content: flex-end;
     align-items: center;
 }
 
-.gpt3__navbar-links p,
-.gpt3__navbar-sign p,
-.gpt3__navbar-menu_container p {
-    color: #1DB954;
+.navbar-links p,
+.navbar-sign p,
+.navbar-menu_container p {
+    color: #e2e4e3;
     font-family: Century Gothic, CenturyGothic, AppleGothic, sans-serif;
     font-weight: 900;
     font-size: 25px;
@@ -51,10 +58,12 @@
     position: relative; /* Add relative positioning */
 }
 
+
+
 /* Create the line beneath each link */
-.gpt3__navbar-links p::after,
-.gpt3__navbar-sign p::after,
-.gpt3__navbar-menu_container p::after {
+.navbar-links p::after,
+.navbar-sign p::after,
+.navbar-menu_container p::after {
     content: "";
     position: absolute;
     left: 0;
@@ -68,16 +77,16 @@
 }
 
 /* When hovering, expand the line */
-.gpt3__navbar-links p.clicked::after,
-.gpt3__navbar-links p:hover::after,
-.gpt3__navbar-menu_container p.clicked::after,
-.gpt3__navbar-menu_container p:hover::after {
+.navbar-links p.clicked::after,
+.navbar-links p:hover::after,
+.navbar-menu_container p.clicked::after,
+.navbar-menu_container p:hover::after {
   transform: scaleX(1); /* Keep the line visible */
   transform-origin: left; /* Expand from the left side */
 }
 
-.gpt3__navbar-sign button,
-.gpt3__navbar-menu_container button {
+.navbar-sign button,
+.navbar-menu_container button {
     padding: 0.5rem 1rem;
     color: #fff;
     background: #FF4820;
@@ -91,18 +100,18 @@
     border-radius: 5px;
 }
 
-.gpt3__navbar-menu {
+.navbar-menu {
     margin-left: 1rem;
 
     display: none;
     position: relative;
 }
 
-.gpt3__navbar-menu svg {
+.navbar-menu svg {
     cursor: pointer;
 }
 
-.gpt3__navbar-menu_container {
+.navbar-menu_container {
     display: flex;
     justify-content: flex-end;
     align-items: flex-end;
@@ -121,44 +130,44 @@
 
 }
 
-.gpt3__navbar-menu_container p {
+.navbar-menu_container p {
     margin: 1rem 0;
 }
 
-.gpt3__navbar-menu_container-links-sign {
+.navbar-menu_container-links-sign {
     display: none;
 }
 
 @media screen and (max-width: 1050px) {
-    .gpt3__navbar-links_container {
+    .navbar-links_container {
         display: none;
     }
 
-    .gpt3__navbar-menu {
+    .navbar-menu {
         display: flex;
     }
 }
 
 @media screen and (max-width: 700px) {
-    .gpt3__navbar {
+    .navbar {
         padding: 2rem 4rem;
     }
 }
 
 @media screen and (max-width: 550px) {
-    .gpt3__navbar {
+    .navbar {
         padding: 2rem;
     }
 
-    .gpt3__navbar-sign {
+    .navbar-sign {
         display: none;
     }
 
-    .gpt3__navbar-menu_container {
+    .__navbar-menu_container {
         top: 20px;
     }
 
-    .gpt3__navbar-menu_container-links-sign {
+    .__navbar-menu_container-links-sign {
         display: block;
     }
 }
