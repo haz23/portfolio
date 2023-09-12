@@ -15,7 +15,6 @@ const Education= ({ title, text, date, logo }) => (
       <p>{text}</p>
     </div>
     <div className="edu-container-logo">
-      <img src={logo} alt={title} /> {/* Use the src attribute */}
     </div>
   </div>
 );

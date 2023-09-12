@@ -1,16 +1,14 @@
 .edu-container {
-    width: 500px;
-    height: 300px;
+    max-width: 100%;
     display: flex;
     align-items: center;
     flex-direction: column;
-    border-radius: 50px;
+    border-radius: 5%; /* Use a percentage for border-radius */
     background: #e2e4e3;
-    box-shadow:  25px -25px 50px #949a97,
-    -25px 25px 50px #ffffff;
+    box-shadow: 2.5% -2.5% 5% #949a97, -2.5% 2.5% 5% #ffffff; /* Use percentages for box-shadow offsets */
     transition: 400ms transform, 400ms box-shadow, 400ms background-color;
     margin-bottom: 2rem;
-    padding: 1rem;
+    padding: 2%; /* Use a percentage for padding */
 }
 
 
@@ -77,14 +75,11 @@
 
 
 @media screen and (max-width: 550px) {
-    .edu-container-title h1 {
+    .edu-container-title h1,
+    .edu-container-text p,
+    .edu-container-date h2 {
         font-size: 14px;
-        line-height: 22px;
-    }
-
-    .edu-container-text p {
-        font-size: 12px;
-        line-height: 20px;
+        line-height: 18px; /* Adjust line-height as needed */
     }
 
     .edu-container {
